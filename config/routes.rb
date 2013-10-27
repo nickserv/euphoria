@@ -1,4 +1,6 @@
 Euphoria::Application.routes.draw do
+  resources :items
+
   resources :rooms
 
   resources :worlds
