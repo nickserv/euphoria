@@ -1,4 +1,5 @@
 Euphoria::Application.routes.draw do
+  devise_for :users
   resources :items
 
   resources :rooms
