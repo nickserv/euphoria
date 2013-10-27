@@ -35,6 +35,8 @@ end
 # Use Devise for authentication
 gem 'devise'
 
+gem 'haml-rails'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
