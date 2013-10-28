@@ -23,12 +23,10 @@
         = link_to "Project name", "#", :class => "navbar-brand"
       .navbar-collapse.collapse
         %ul.nav.navbar-nav
-          %li.active
-            %a{:href => "#"} Home
-          %li
-            %a{:href => "#about"} About
-          %li
-            %a{:href => "#contact"} Contact
+          %li.active= link_to 'Home', page_path('home')
+          %li= link_to 'Worlds', worlds_path
+          %li= link_to 'Rooms', rooms_path
+          %li= link_to 'Items', items_path
     .container
       - flash.each do |name, msg|
         = content_tag :div, :class => "alert #{name == :error ? "alert-error" : "alert-success" }" do

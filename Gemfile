@@ -39,6 +39,8 @@ gem 'haml-rails'
 
 gem 'bootstrap-generators', '~> 3.0'
 
+gem 'high_voltage'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
