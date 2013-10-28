@@ -1,15 +1,16 @@
-%p#notice= notice
+.page-header
+  = link_to rooms_path, :class => 'btn btn-default' do
+    %span.glyphicon.glyphicon-list-alt
+    Back
+  = link_to edit_room_path(@room), :class => 'btn btn-primary' do
+    %span.glyphicon.glyphicon-pencil
+    Edit
+  %h1 Show room
 
-%p
-  %b Name:
-  = @room.name
-%p
-  %b Description:
-  = @room.description
-%p
-  %b World:
-  = @room.world
-
-= link_to 'Edit', edit_room_path(@room)
-\|
-= link_to 'Back', rooms_path
+%dl.dl-horizontal
+  %dt Name:
+  %dd= @room.name
+  %dt Description:
+  %dd= @room.description
+  %dt World:
+  %dd= @room.world

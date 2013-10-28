@@ -1,21 +1,24 @@
-%h1 Listing items
+.page-header
+  = link_to new_item_path, :class => 'btn btn-primary' do
+    %span.glyphicon.glyphicon-plus
+    New Item
+  %h1 Listing items
 
-%table
-  %tr
-    %th Name
-    %th Description
-    %th
-    %th
-    %th
+.table-responsive
+  %table.table.table-striped.table-bordered.table-hover
+    %thead
+      %tr
+        %th Name
+        %th Description
+        %th
+        %th
+        %th
 
-  - @items.each do |item|
-    %tr
-      %td= item.name
-      %td= item.description
-      %td= link_to 'Show', item
-      %td= link_to 'Edit', edit_item_path(item)
-      %td= link_to 'Destroy', item, :method => :delete, :data => { :confirm => 'Are you sure?' }
-
-%br
-
-= link_to 'New Item', new_item_path
+    %tbody
+      - @items.each do |item|
+        %tr
+          %td= item.name
+          %td= item.description
+          %td= link_to 'Show', item
+          %td= link_to 'Edit', edit_item_path(item)
+          %td= link_to 'Destroy', item, :data => { confirm: 'Are you sure?' }, :method => :delete

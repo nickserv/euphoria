@@ -1,12 +1,14 @@
-%p#notice= notice
+.page-header
+  = link_to worlds_path, :class => 'btn btn-default' do
+    %span.glyphicon.glyphicon-list-alt
+    Back
+  = link_to edit_world_path(@world), :class => 'btn btn-primary' do
+    %span.glyphicon.glyphicon-pencil
+    Edit
+  %h1 Show world
 
-%p
-  %b Name:
-  = @world.name
-%p
-  %b Description:
-  = @world.description
-
-= link_to 'Edit', edit_world_path(@world)
-\|
-= link_to 'Back', worlds_path
+%dl.dl-horizontal
+  %dt Name:
+  %dd= @world.name
+  %dt Description:
+  %dd= @world.description

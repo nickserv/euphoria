@@ -1,23 +1,26 @@
-%h1 Listing rooms
+.page-header
+  = link_to new_room_path, :class => 'btn btn-primary' do
+    %span.glyphicon.glyphicon-plus
+    New Room
+  %h1 Listing rooms
 
-%table
-  %tr
-    %th Name
-    %th Description
-    %th World
-    %th
-    %th
-    %th
+.table-responsive
+  %table.table.table-striped.table-bordered.table-hover
+    %thead
+      %tr
+        %th Name
+        %th Description
+        %th World
+        %th
+        %th
+        %th
 
-  - @rooms.each do |room|
-    %tr
-      %td= room.name
-      %td= room.description
-      %td= room.world
-      %td= link_to 'Show', room
-      %td= link_to 'Edit', edit_room_path(room)
-      %td= link_to 'Destroy', room, :method => :delete, :data => { :confirm => 'Are you sure?' }
-
-%br
-
-= link_to 'New Room', new_room_path
+    %tbody
+      - @rooms.each do |room|
+        %tr
+          %td= room.name
+          %td= room.description
+          %td= room.world
+          %td= link_to 'Show', room
+          %td= link_to 'Edit', edit_room_path(room)
+          %td= link_to 'Destroy', room, :data => { confirm: 'Are you sure?' }, :method => :delete

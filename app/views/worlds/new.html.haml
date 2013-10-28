@@ -1,5 +1,7 @@
-%h1 New world
+.page-header
+  = link_to worlds_path, :class => 'btn btn-default' do
+    %span.glyphicon.glyphicon-list-alt
+    Back
+  %h1 New world
 
 = render 'form'
-
-= link_to 'Back', worlds_path

@@ -1,19 +1,25 @@
-= form_for @room do |f|
-  - if @room.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@room.errors.count, "error")} prohibited this room from being saved:"
+= form_for @room, :html => { :class => "form-horizontal" } do |f|
+  -if @room.errors.any?
+    .alert.alert-danger.alert-dismissable
+      %button.close{"aria-hidden" => "true", "data-dismiss" => "alert", :type => "button"} &times;
+      %h4= "#{pluralize(@room.errors.count, "error")} prohibited this room from being saved:"
+
       %ul
         - @room.errors.full_messages.each do |msg|
           %li= msg
 
-  .field
-    = f.label :name
-    = f.text_field :name
-  .field
-    = f.label :description
-    = f.text_field :description
-  .field
-    = f.label :world
-    = f.text_field :world
-  .actions
-    = f.submit 'Save'
+  .form-group
+    = f.label :name, :class => 'col-lg-2 control-label'
+    .col-lg-10
+      = f.text_field :name, :class => 'form-control'
+  .form-group
+    = f.label :description, :class => 'col-lg-2 control-label'
+    .col-lg-10
+      = f.text_field :description, :class => 'form-control'
+  .form-group
+    = f.label :world, :class => 'col-lg-2 control-label'
+    .col-lg-10
+      = f.text_field :world, :class => 'form-control'
+  .form-group
+    .col-lg-offset-2 col-lg-10
+      = f.submit :class => 'btn btn-primary'

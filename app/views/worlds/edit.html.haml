@@ -1,7 +1,10 @@
-%h1 Editing world
+.page-header
+  = link_to worlds_path, :class => 'btn btn-default' do
+    %span.glyphicon.glyphicon-list-alt
+    Back
+  = link_to @world, :class => 'btn btn-primary' do
+    %span.glyphicon.glyphicon-info-sign
+    Show
+  %h1 Editing world
 
 = render 'form'
-
-= link_to 'Show', @world
-\|
-= link_to 'Back', worlds_path

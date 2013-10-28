@@ -1,5 +1,7 @@
-%h1 New room
+.page-header
+  = link_to rooms_path, :class => 'btn btn-default' do
+    %span.glyphicon.glyphicon-list-alt
+    Back
+  %h1 New room
 
 = render 'form'
-
-= link_to 'Back', rooms_path
