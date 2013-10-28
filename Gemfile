@@ -41,6 +41,10 @@ gem 'bootstrap-generators', '~> 3.0'
 
 gem 'high_voltage'
 
+group :development, :test do
+  gem 'rspec-rails', '~> 2.0'
+end
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
