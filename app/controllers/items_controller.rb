@@ -29,9 +29,9 @@ class ItemsController < ApplicationController
     respond_to do |format|
       if @item.save
         format.html { redirect_to @item, notice: 'Item was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @item }
+        format.json { render 'show', status: :created, location: @item }
       else
-        format.html { render action: 'new' }
+        format.html { render 'new' }
         format.json { render json: @item.errors, status: :unprocessable_entity }
       end
     end
@@ -45,7 +45,7 @@ class ItemsController < ApplicationController
         format.html { redirect_to @item, notice: 'Item was successfully updated.' }
         format.json { head :no_content }
       else
-        format.html { render action: 'edit' }
+        format.html { render 'edit' }
         format.json { render json: @item.errors, status: :unprocessable_entity }
       end
     end

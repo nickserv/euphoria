@@ -29,9 +29,9 @@ class WorldsController < ApplicationController
     respond_to do |format|
       if @world.save
         format.html { redirect_to @world, notice: 'World was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @world }
+        format.json { render 'show', status: :created, location: @world }
       else
-        format.html { render action: 'new' }
+        format.html { render 'new' }
         format.json { render json: @world.errors, status: :unprocessable_entity }
       end
     end
@@ -45,7 +45,7 @@ class WorldsController < ApplicationController
         format.html { redirect_to @world, notice: 'World was successfully updated.' }
         format.json { head :no_content }
       else
-        format.html { render action: 'edit' }
+        format.html { render 'edit' }
         format.json { render json: @world.errors, status: :unprocessable_entity }
       end
     end
