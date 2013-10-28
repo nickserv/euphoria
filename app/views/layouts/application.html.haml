@@ -14,22 +14,21 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    .navbar.navbar-fixed-top
-      .navbar-inner
-        .container
-          %a.btn.btn-navbar{:data => {:toggle => "collapse", :target => ".nav-collapse"} }
-            %span.icon-bar
-            %span.icon-bar
-            %span.icon-bar
-          = link_to "Project name", "#", :class => "brand"
-          .nav-collapse
-            %ul.nav
-              %li.active
-                %a{:href => "#"} Home
-              %li
-                %a{:href => "#about"} About
-              %li
-                %a{:href => "#contact"} Contact
+    .navbar.navbar-default.navbar-fixed-top
+      .navbar-header
+        %a.btn.btn-navbar{:data => {:toggle => "collapse", :target => ".nav-collapse"} }
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        = link_to "Project name", "#", :class => "navbar-brand"
+      .navbar-collapse.collapse
+        %ul.nav.navbar-nav
+          %li.active
+            %a{:href => "#"} Home
+          %li
+            %a{:href => "#about"} About
+          %li
+            %a{:href => "#contact"} Contact
     .container
       - flash.each do |name, msg|
         = content_tag :div, :class => "alert #{name == :error ? "alert-error" : "alert-success" }" do
