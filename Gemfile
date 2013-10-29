@@ -6,43 +6,35 @@ gem 'rails', '4.0.1.rc1'
 # Servers
 gem 'thin'
 
-# Use sqlite3 as the database for Active Record
+# Databases
 gem 'sqlite3'
 
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
+# Controllers
+gem 'high_voltage'
 
-# Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
-
-# Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.0.0'
+# Authentication
+gem 'devise'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
-# Use jquery as the JavaScript library
-gem 'jquery-rails'
+# View languages
+gem 'haml-rails' # views
+gem 'sass-rails', '~> 4.0.0' # stylesheets
+gem 'coffee-rails', '~> 4.0.0' # scripts (assets and views)
 
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
+# Views
+gem 'uglifier', '>= 1.3.0' # JavaScript compressor
+gem 'jquery-rails' # JavaScript library
+gem 'turbolinks' # makes following links faster
+gem 'jbuilder', '~> 1.2' # builds JSON APIs with ease
+gem 'bootstrap-generators', '~> 3.0' # adds Bootstrap support to generators
 
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 1.2'
-
+# Documentation
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
-
-# Use Devise for authentication
-gem 'devise'
-
-gem 'haml-rails'
-
-gem 'bootstrap-generators', '~> 3.0'
-
-gem 'high_voltage'
 
 # Use unicorn as the app server
 # gem 'unicorn'
