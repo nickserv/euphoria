@@ -1,11 +1,11 @@
-= form_for @room, :html => { :class => "form-horizontal" } do |f|
-  -if @room.errors.any?
+= form_for room, :html => { :class => "form-horizontal" } do |f|
+  -if room.errors.any?
     .alert.alert-danger.alert-dismissable
       %button.close{"aria-hidden" => "true", "data-dismiss" => "alert", :type => "button"} &times;
-      %h4= "#{pluralize(@room.errors.count, "error")} prohibited this room from being saved:"
+      %h4= "#{pluralize(room.errors.count, "error")} prohibited this room from being saved:"
 
       %ul
-        - @room.errors.full_messages.each do |msg|
+        - room.errors.full_messages.each do |msg|
           %li= msg
 
   .form-group
