@@ -4,4 +4,4 @@
     Back
   %h1 New item
 
-= render 'form'
+= render partial: 'form', locals: { item: @item }
