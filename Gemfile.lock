@@ -48,6 +48,7 @@ GEM
     erubis (2.7.0)
     eventmachine (1.0.3)
     execjs (2.0.2)
+    gravatar-ultimate (1.0.3)
     haml (4.0.3)
       tilt
     haml-rails (0.4)
@@ -141,6 +142,7 @@ DEPENDENCIES
   bootstrap-generators (~> 3.0)
   coffee-rails (~> 4.0.0)
   devise
+  gravatar-ultimate
   haml-rails
   high_voltage
   jbuilder (~> 1.2)
