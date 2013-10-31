@@ -36,6 +36,11 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+# Testing
+group :test do
+  gem 'simplecov', require: false # code coverage
+end
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
