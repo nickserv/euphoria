@@ -23,20 +23,20 @@
         = link_to "Euphoria", "#", :class => "navbar-brand"
       .navbar-collapse.collapse
         %ul.nav.navbar-nav
-          %li.active= link_to 'Home', root_path
-          %li= link_to 'Worlds', worlds_path
-          %li= link_to 'Rooms', rooms_path
-          %li= link_to 'Items', items_path
+          %li{class: ('active' if controller? 'pages')}= link_to 'Home', root_path
+          %li{class: ('active' if controller? 'worlds')}= link_to 'Worlds', worlds_path
+          %li{class: ('active' if controller? 'rooms')}= link_to 'Rooms', rooms_path
+          %li{class: ('active' if controller? 'items')}= link_to 'Items', items_path
         %ul.nav.navbar-nav.navbar-right
           - if user_signed_in?
-            %li
+            %li{class: ('active' if controller? 'registrations')}
               = link_to edit_user_registration_path do
                 = image_tag Gravatar.new(current_user.email).image_url, size: '16', alt: 'Avatar'
                 Account
-            %li= link_to "Log out", destroy_user_session_path
+            %li{class: ('active' if controller? 'sessions')}= link_to "Log out", destroy_user_session_path
           - else
-            %li= link_to 'Sign up', new_user_registration_path
-            %li= link_to 'Log in', new_user_session_path
+            %li{class: ('active' if controller? 'registrations')}= link_to 'Sign up', new_user_registration_path
+            %li{class: ('active' if controller? 'sessions')}= link_to 'Log in', new_user_session_path
     .container
       - flash.each do |name, msg|
         = content_tag :div, :class => "alert #{name == :error ? "alert-error" : "alert-success" }" do
