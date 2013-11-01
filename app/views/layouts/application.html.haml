@@ -20,10 +20,9 @@
           %span.icon-bar
           %span.icon-bar
           %span.icon-bar
-        = link_to "Euphoria", "#", :class => "navbar-brand"
+        = link_to "Euphoria", root_path, :class => "navbar-brand"
       .navbar-collapse.collapse
         %ul.nav.navbar-nav
-          %li{class: ('active' if controller? 'pages')}= link_to 'Home', root_path
           %li{class: ('active' if controller? 'worlds')}= link_to 'Worlds', worlds_path
           %li{class: ('active' if controller? 'rooms')}= link_to 'Rooms', rooms_path
           %li{class: ('active' if controller? 'items')}= link_to 'Items', items_path
