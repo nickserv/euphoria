@@ -32,7 +32,7 @@
             %li{class: ('active' if controller? 'registrations')}
               = link_to edit_user_registration_path do
                 = image_tag Gravatar.new(current_user.email).image_url, size: '16', alt: 'Avatar'
-                Account
+                = current_user.email
             %li{class: ('active' if controller? 'sessions')}= link_to "Log out", destroy_user_session_path
           - else
             %li{class: ('active' if controller? 'registrations')}= link_to 'Sign up', new_user_registration_path
