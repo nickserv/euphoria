@@ -18,7 +18,7 @@ class WorldsControllerTest < ActionController::TestCase
 
   test "should create world" do
     assert_difference('World.count') do
-      post :create, world: { description: @world.description, name: @world.name }
+      post :create, world: { name: 'New World' }
     end
 
     assert_redirected_to world_path(assigns(:world))
