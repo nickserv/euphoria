@@ -2,7 +2,7 @@ require 'test_helper'
 
 class WorldsControllerTest < ActionController::TestCase
   setup do
-    @world = worlds(:one)
+    @world = worlds(:earth)
   end
 
   test "should get index" do

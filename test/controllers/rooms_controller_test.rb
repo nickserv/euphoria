@@ -2,7 +2,7 @@ require 'test_helper'
 
 class RoomsControllerTest < ActionController::TestCase
   setup do
-    @room = rooms(:one)
+    @room = rooms(:kitchen)
   end
 
   test "should get index" do
