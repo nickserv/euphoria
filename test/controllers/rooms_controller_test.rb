@@ -24,6 +24,12 @@ class RoomsControllerTest < ActionController::TestCase
     assert_redirected_to room_path(assigns(:room))
   end
 
+  test "should not create invalid room" do
+    assert_no_difference('Room.count') do
+      post :create, room: { name: 'Kitchen' }
+    end
+  end
+
   test "should show room" do
     get :show, id: @room
     assert_response :success
@@ -37,6 +43,12 @@ class RoomsControllerTest < ActionController::TestCase
   test "should update room" do
     patch :update, id: @room, room: { description: @room.description, name: @room.name, world_id: @room.world_id }
     assert_redirected_to room_path(assigns(:room))
+  end
+
+  test "should not update invalid room" do
+    assert_no_difference('Room.count') do
+      patch :update, id: @room, room: { name: 'Basement' }
+    end
   end
 
   test "should destroy room" do

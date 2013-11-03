@@ -24,6 +24,12 @@ class ItemsControllerTest < ActionController::TestCase
     assert_redirected_to item_path(assigns(:item))
   end
 
+  test "should not create invalid item" do
+    assert_no_difference('Item.count') do
+      post :create, item: { name: 'Sword' }
+    end
+  end
+
   test "should show item" do
     get :show, id: @item
     assert_response :success
@@ -37,6 +43,12 @@ class ItemsControllerTest < ActionController::TestCase
   test "should update item" do
     patch :update, id: @item, item: { description: @item.description, name: @item.name }
     assert_redirected_to item_path(assigns(:item))
+  end
+
+  test "should not update invalid item" do
+    assert_no_difference('Item.count') do
+      patch :update, id: @item, item: { name: 'Shield' }
+    end
   end
 
   test "should destroy item" do

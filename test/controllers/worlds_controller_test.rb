@@ -24,6 +24,12 @@ class WorldsControllerTest < ActionController::TestCase
     assert_redirected_to world_path(assigns(:world))
   end
 
+  test "should not create invalid world" do
+    assert_no_difference('World.count') do
+      post :create, world: { name: 'Earth' }
+    end
+  end
+
   test "should show world" do
     get :show, id: @world
     assert_response :success
@@ -37,6 +43,12 @@ class WorldsControllerTest < ActionController::TestCase
   test "should update world" do
     patch :update, id: @world, world: { description: @world.description, name: @world.name }
     assert_redirected_to world_path(assigns(:world))
+  end
+
+  test "should not update invalid world" do
+    assert_no_difference('World.count') do
+      patch :update, id: @world, world: { name: 'Mars' }
+    end
   end
 
   test "should destroy world" do
