@@ -46,6 +46,16 @@ group :test do
   gem 'simplecov', require: false # code coverage
 end
 
+# Development tools
+group :development do
+  # Command line tools
+  gem 'rails_best_practices'
+
+  # Pretty errors
+  gem 'binding_of_caller'
+  gem 'better_errors'
+end
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
