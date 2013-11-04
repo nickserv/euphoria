@@ -7,7 +7,11 @@ gem 'rails', '4.0.1'
 gem 'thin'
 
 # Databases
-gem 'sqlite3'
+gem 'pg', group: :production
+gem 'sqlite3', group: [:development, :test]
+
+# Logging and asset support for Heroku
+gem 'rails_12factor', group: :production
 
 # Controllers
 gem 'high_voltage'
