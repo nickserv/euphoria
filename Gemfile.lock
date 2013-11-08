@@ -50,7 +50,7 @@ GEM
     colored (1.2)
     daemons (1.1.9)
     debug_inspector (0.0.2)
-    devise (3.1.1)
+    devise (3.2.0)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 3.2.6, < 5)
@@ -59,8 +59,10 @@ GEM
     erubis (2.7.0)
     eventmachine (1.0.3)
     execjs (2.0.2)
-    gravatar-ultimate (1.0.3)
-    haml (4.0.3)
+    gravatar-ultimate (2.0.0)
+      activesupport (>= 2.3.14)
+      rack
+    haml (4.0.4)
       tilt
     haml-rails (0.4)
       actionpack (>= 3.1, < 4.1)
