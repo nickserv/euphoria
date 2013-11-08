@@ -50,6 +50,7 @@ end
 group :development do
   # Command line tools
   gem 'rails_best_practices'
+  gem 'rubocop'
 
   # Pretty errors
   gem 'binding_of_caller'
