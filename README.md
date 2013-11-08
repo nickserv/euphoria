@@ -1,4 +1,5 @@
 # README
+[![Build Status](https://magnum.travis-ci.com/thenickperson/euphoria.png?token=2YpiqRLGxdsv1ho7eXeu&branch=master)](https://magnum.travis-ci.com/thenickperson/euphoria)
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
