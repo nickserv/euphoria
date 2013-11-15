@@ -14,3 +14,7 @@
   %dd= @room.description
   %dt World:
   %dd= @room.world
+
+%h1 Neighbors
+- @room.neighbors.each do |neighbor|
+  %li= link_to neighbor

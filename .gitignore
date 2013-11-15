@@ -17,3 +17,6 @@
 
 # Ignore code coverage.
 /coverage
+
+# Ignore generated documentation.
+/doc

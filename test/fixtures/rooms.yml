@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
+kitchen:
+  name: Kitchen
   description: MyString
   world_id: 
 
-two:
-  name: MyString
+basement:
+  name: Basement
   description: MyString
   world_id: 

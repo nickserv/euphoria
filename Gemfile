@@ -1,13 +1,17 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.1.rc1'
+gem 'rails', '4.0.1'
 
 # Servers
 gem 'thin'
 
 # Databases
-gem 'sqlite3'
+gem 'pg', group: :production
+gem 'sqlite3', group: [:development, :test]
+
+# Logging and asset support for Heroku
+gem 'rails_12factor', group: :production
 
 # Controllers
 gem 'high_voltage'
@@ -29,6 +33,7 @@ gem 'jquery-rails' # JavaScript library
 gem 'turbolinks' # makes following links faster
 gem 'jbuilder', '~> 1.2' # builds JSON APIs with ease
 gem 'bootstrap-generators', '~> 3.0' # adds Bootstrap support to generators
+gem 'gravatar-ultimate' # Gravatar support
 
 # Documentation
 group :doc do
@@ -42,6 +47,17 @@ group :development, :test do
 end
 group :test do
   gem 'simplecov', require: false # code coverage
+end
+
+# Development tools
+group :development do
+  # Command line tools
+  gem 'rails_best_practices'
+  gem 'rubocop'
+
+  # Pretty errors
+  gem 'binding_of_caller'
+  gem 'better_errors'
 end
 
 # Use unicorn as the app server
