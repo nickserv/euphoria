@@ -1,13 +1,17 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.1.rc1'
+gem 'rails', '4.0.1'
 
 # Servers
 gem 'thin'
 
 # Databases
-gem 'sqlite3'
+gem 'pg', group: :production
+gem 'sqlite3', group: [:development, :test]
+
+# Logging and asset support for Heroku
+gem 'rails_12factor', group: :production
 
 # Controllers
 gem 'high_voltage'
@@ -41,6 +45,17 @@ end
 # Testing
 group :test do
   gem 'simplecov', require: false # code coverage
+end
+
+# Development tools
+group :development do
+  # Command line tools
+  gem 'rails_best_practices'
+  gem 'rubocop'
+
+  # Pretty errors
+  gem 'binding_of_caller'
+  gem 'better_errors'
 end
 
 # Use unicorn as the app server

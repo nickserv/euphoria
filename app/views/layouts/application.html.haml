@@ -14,29 +14,28 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    .navbar.navbar-default.navbar-fixed-top
+    .navbar.navbar-default.navbar-static-top
       .navbar-header
         %a.btn.btn-navbar{:data => {:toggle => "collapse", :target => ".nav-collapse"} }
           %span.icon-bar
           %span.icon-bar
           %span.icon-bar
-        = link_to "Euphoria", "#", :class => "navbar-brand"
+        = link_to "Euphoria", root_path, :class => "navbar-brand"
       .navbar-collapse.collapse
         %ul.nav.navbar-nav
-          %li.active= link_to 'Home', root_path
-          %li= link_to 'Worlds', worlds_path
-          %li= link_to 'Rooms', rooms_path
-          %li= link_to 'Items', items_path
+          %li{class: ('active' if controller? 'worlds')}= link_to 'Worlds', worlds_path
+          %li{class: ('active' if controller? 'rooms')}= link_to 'Rooms', rooms_path
+          %li{class: ('active' if controller? 'items')}= link_to 'Items', items_path
         %ul.nav.navbar-nav.navbar-right
           - if user_signed_in?
-            %li
+            %li{class: ('active' if controller? 'registrations')}
               = link_to edit_user_registration_path do
                 = image_tag Gravatar.new(current_user.email).image_url, size: '16', alt: 'Avatar'
-                Account
-            %li= link_to "Log out", destroy_user_session_path
+                = current_user.email
+            %li{class: ('active' if controller? 'sessions')}= link_to "Log out", destroy_user_session_path
           - else
-            %li= link_to 'Sign up', new_user_registration_path
-            %li= link_to 'Log in', new_user_session_path
+            %li{class: ('active' if controller? 'registrations')}= link_to 'Sign up', new_user_registration_path
+            %li{class: ('active' if controller? 'sessions')}= link_to 'Log in', new_user_session_path
     .container
       - flash.each do |name, msg|
         = content_tag :div, :class => "alert #{name == :error ? "alert-error" : "alert-success" }" do
@@ -45,4 +44,7 @@
       = yield
       %hr
       %footer
-        %p &copy; Company 2012
+        %p
+          &copy;
+          = link_to 'Nicolas McCurdy', 'http://thenickperson.com', target: '_blank'
+          2013
