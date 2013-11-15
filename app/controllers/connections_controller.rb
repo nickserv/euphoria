@@ -35,6 +35,6 @@ class ConnectionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def connection_params
-      params.require(:connection).permit(:source_id, :destination_id)
+      params.require(:connection).permit(:source_id, :destination_id, :direction)
     end
 end
