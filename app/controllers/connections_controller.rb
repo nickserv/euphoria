@@ -9,9 +9,9 @@ class ConnectionsController < ApplicationController
     respond_to do |format|
       if @connection.save
         format.html { redirect_to @connection, notice: 'Connection was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @connection }
+        format.json { render 'show', status: :created, location: @connection }
       else
-        format.html { render action: 'new' }
+        format.html { render 'new' }
         format.json { render json: @connection.errors, status: :unprocessable_entity }
       end
     end
@@ -28,6 +28,7 @@ class ConnectionsController < ApplicationController
   end
 
   private
+
     # Use callbacks to share common setup or constraints between actions.
     def set_connection
       @connection = Connection.find(params[:id])

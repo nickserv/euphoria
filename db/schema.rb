@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131115220250) do
+ActiveRecord::Schema.define(version: 20131116221102) do
 
   create_table "connections", force: true do |t|
     t.integer  "source_id"
@@ -20,6 +20,9 @@ ActiveRecord::Schema.define(version: 20131115220250) do
     t.datetime "updated_at"
     t.string   "direction"
   end
+
+  add_index "connections", ["destination_id"], name: "index_connections_on_destination_id"
+  add_index "connections", ["source_id"], name: "index_connections_on_source_id"
 
   create_table "items", force: true do |t|
     t.string   "name"
