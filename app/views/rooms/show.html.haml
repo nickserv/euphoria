@@ -16,5 +16,7 @@
   %dd= @room.world
 
 %h1 Neighbors
-- @room.neighbors.each do |neighbor|
-  %li= link_to neighbor
+- @room.connections.each do |connection|
+  %li
+    = link_to connection.neighbor.name, room_path(connection.neighbor)
+    (#{connection.direction})
