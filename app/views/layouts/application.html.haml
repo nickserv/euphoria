@@ -23,20 +23,41 @@
         = link_to "Euphoria", root_path, :class => "navbar-brand"
       .navbar-collapse.collapse
         %ul.nav.navbar-nav
-          %li{class: ('active' if controller? 'worlds')}= link_to 'Worlds', worlds_path
-          %li{class: ('active' if controller? 'rooms')}= link_to 'Rooms', rooms_path
-          %li{class: ('active' if controller? 'connections')}= link_to 'Connections', connections_path
-          %li{class: ('active' if controller? 'items')}= link_to 'Items', items_path
+          %li{class: ('active' if controller? 'worlds')}
+            = link_to worlds_path do
+              %span.glyphicon.glyphicon-globe
+              Worlds
+          %li{class: ('active' if controller? 'rooms')}
+            = link_to rooms_path do
+              %span.glyphicon.glyphicon-home
+              Rooms
+          %li{class: ('active' if controller? 'connections')}
+            = link_to connections_path do
+              %span.glyphicon.glyphicon-link
+              Connections
+          %li{class: ('active' if controller? 'items')}
+            = link_to items_path do
+              %span.glyphicon.glyphicon-gift
+              Items
         %ul.nav.navbar-nav.navbar-right
           - if user_signed_in?
             %li{class: ('active' if controller? 'registrations')}
               = link_to edit_user_registration_path do
                 = image_tag Gravatar.new(current_user.email).image_url, size: '16', alt: 'Avatar'
                 = current_user.email
-            %li{class: ('active' if controller? 'sessions')}= link_to "Log out", destroy_user_session_path
+            %li{class: ('active' if controller? 'sessions')}
+              = link_to destroy_user_session_path do
+                %span.glyphicon.glyphicon-log-out
+                Log out
           - else
-            %li{class: ('active' if controller? 'registrations')}= link_to 'Sign up', new_user_registration_path
-            %li{class: ('active' if controller? 'sessions')}= link_to 'Log in', new_user_session_path
+            %li{class: ('active' if controller? 'registrations')}
+              = link_to new_user_registration_path do
+                %span.glyphicon.glyphicon-user
+                Sign up
+            %li{class: ('active' if controller? 'sessions')}
+              = link_to  new_user_session_path do
+                %span.glyphicon.glyphicon-log-in
+                Log in
     .container
       - flash.each do |name, msg|
         = content_tag :div, :class => "alert #{name == :error ? "alert-error" : "alert-success" }" do
