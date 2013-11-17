@@ -7,7 +7,7 @@ class ConnectionsControllerTest < ActionController::TestCase
 
   test 'should create connection' do
     assert_difference('Connection.count') do
-      post :create, connection: { destination_id: @connection.destination_id, direction: @connection.direction, source_id: @connection.source_id }
+      post :create, connection: { direction: @connection.direction, neighbor_id: @connection.neighbor_id, room_id: @connection.room_id }
     end
 
     assert_redirected_to connection_path(assigns(:connection))

@@ -11,18 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131116221102) do
+ActiveRecord::Schema.define(version: 20131117021335) do
 
   create_table "connections", force: true do |t|
-    t.integer  "source_id"
-    t.integer  "destination_id"
+    t.integer  "room_id"
+    t.integer  "neighbor_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "direction"
   end
 
-  add_index "connections", ["destination_id"], name: "index_connections_on_destination_id"
-  add_index "connections", ["source_id"], name: "index_connections_on_source_id"
+  add_index "connections", ["neighbor_id"], name: "index_connections_on_neighbor_id"
+  add_index "connections", ["room_id"], name: "index_connections_on_room_id"
 
   create_table "items", force: true do |t|
     t.string   "name"
