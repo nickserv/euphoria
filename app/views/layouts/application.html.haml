@@ -25,6 +25,7 @@
         %ul.nav.navbar-nav
           %li{class: ('active' if controller? 'worlds')}= link_to 'Worlds', worlds_path
           %li{class: ('active' if controller? 'rooms')}= link_to 'Rooms', rooms_path
+          %li{class: ('active' if controller? 'connections')}= link_to 'Connections', connections_path
           %li{class: ('active' if controller? 'items')}= link_to 'Items', items_path
         %ul.nav.navbar-nav.navbar-right
           - if user_signed_in?
