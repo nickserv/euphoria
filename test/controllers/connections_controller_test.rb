@@ -3,6 +3,8 @@ require 'test_helper'
 class ConnectionsControllerTest < ActionController::TestCase
   setup do
     @connection = connections(:one)
+    @connection.room = rooms(:kitchen)
+    @connection.neighbor = rooms(:basement)
   end
 
   test 'should get index' do

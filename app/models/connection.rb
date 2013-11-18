@@ -2,6 +2,9 @@ class Connection < ActiveRecord::Base
   belongs_to :room
   belongs_to :neighbor, class_name: :Room
 
+  validates :room, :neighbor,
+    presence: true
+
   validates :direction,
             presence: true,
             inclusion: {

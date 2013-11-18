@@ -3,6 +3,9 @@ class Room < ActiveRecord::Base
   has_many :connections
   has_many :neighbors, through: :connections
 
+  validates :world,
+    presence: true
+
   validates :name,
             presence: true,
             uniqueness: { scope: :world }

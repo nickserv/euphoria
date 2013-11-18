@@ -3,6 +3,7 @@ require 'test_helper'
 class RoomsControllerTest < ActionController::TestCase
   setup do
     @room = rooms(:kitchen)
+    @room.world = worlds(:earth)
   end
 
   test 'should get index' do
