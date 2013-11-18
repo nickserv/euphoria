@@ -20,9 +20,9 @@ to fork this and/or submit issues!
 * modern game features such as achievements, user profiles, and chat
 
 == Inspired by
-* classic interactive fiction games, especially Zork
-* Glitch (http://www.glitchthegame.com/)
-* Parchment (https://code.google.com/p/parchment/)
+* classic interactive fiction games, especially {Zork}[http://en.wikipedia.org/wiki/Zork]
+* {Glitch}[http://www.glitchthegame.com/]
+* {Parchment}[https://code.google.com/p/parchment/]
 
 == Requirements
 * Ruby 2.0
