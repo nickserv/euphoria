@@ -17,6 +17,11 @@ to fork this and/or submit issues!
 * mobile support
 * modern game features such as achievements, user profiles, and chat
 
+== Inspired by
+* classic interactive fiction games, especially Zork
+* Glitch (http://www.glitchthegame.com/)
+* Parchment (https://code.google.com/p/parchment/)
+
 == Requirements
 * Ruby 2.0
 * node.js (for assets)
