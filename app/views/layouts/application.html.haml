@@ -14,14 +14,15 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    .navbar.navbar-default.navbar-static-top
+    %nav.navbar.navbar-default.navbar-static-top{role: "navigation"}
       .navbar-header
-        %a.btn.btn-navbar{:data => {:toggle => "collapse", :target => ".nav-collapse"} }
+        %button.navbar-toggle{:data => {:toggle => "collapse", :target => "#main-navbar-collapse"}, :type => "button"}
+          %span.sr-only Toggle navigation
           %span.icon-bar
           %span.icon-bar
           %span.icon-bar
         = link_to "Euphoria", root_path, :class => "navbar-brand"
-      .navbar-collapse.collapse
+      #main-navbar-collapse.collapse.navbar-collapse
         %ul.nav.navbar-nav
           %li{class: ('active' if controller? 'worlds')}
             = link_to worlds_path do
