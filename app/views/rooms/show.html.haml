@@ -15,6 +15,10 @@
   %dt World:
   %dd= @room.world
 
-%h1 Neighbors
-- @room.neighbors.each do |neighbor|
-  %li= link_to neighbor
+%hr
+
+%h2 Neighbors
+%dl.dl-horizontal
+  - @room.connections.each do |connection|
+    %dt #{connection.direction.titlecase}:
+    %dd= link_to connection.neighbor.name, room_path(connection.neighbor)

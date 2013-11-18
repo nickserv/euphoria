@@ -1,9 +1,7 @@
 Euphoria::Application.routes.draw do
   devise_for :users
 
-  resources :items, :rooms, :worlds
-
-  resources :connections, only: [:create, :destroy]
+  resources :items, :rooms, :worlds, :connections
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

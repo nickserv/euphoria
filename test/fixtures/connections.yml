@@ -1,9 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  source_id: 1
-  destination_id: 1
+  direction: north
 
 two:
-  source_id: 1
-  destination_id: 1
+  direction: south

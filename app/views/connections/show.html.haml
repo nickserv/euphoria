@@ -1,0 +1,16 @@
+.page-header
+  = link_to connections_path, :class => 'btn btn-default' do
+    %span.glyphicon.glyphicon-list-alt
+    Back
+  = link_to edit_connection_path(@connection), :class => 'btn btn-primary' do
+    %span.glyphicon.glyphicon-pencil
+    Edit
+  %h1 Show connection
+
+%dl.dl-horizontal
+  %dt Room:
+  %dd= @connection.room_id
+  %dt Neighbor:
+  %dd= @connection.neighbor_id
+  %dt Direction:
+  %dd= @connection.direction
