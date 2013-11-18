@@ -1,5 +1,5 @@
 = Euphoria
-{<img src="https://magnum.travis-ci.com/thenickperson/euphoria.png?token=2YpiqRLGxdsv1ho7eXeu&branch=simple-form" alt="Build Status" />}[https://magnum.travis-ci.com/thenickperson/euphoria]
+{<img src="https://travis-ci.org/thenickperson/euphoria.png?branch=master" alt="Build Status" />}[https://travis-ci.org/thenickperson/euphoria]
 
 Euphoria is a site dedicated to creating, editing, and playing text adventures
 collaboratively. Euphoria is not a MUD, but multiplayer world exploration and
