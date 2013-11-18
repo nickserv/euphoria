@@ -32,7 +32,7 @@ to fork this and/or submit issues!
 
 == Setup
 1. Clone the repository.
-2. bundle
-3. rake db:setup
-4. rails server -d
-5. Visit localhost:3000.
+2. <code>bundle</code>
+3. <code>rake db:setup</code>
+4. <code>rails server -d</code>
+5. Visit <code>localhost:3000</code>.
