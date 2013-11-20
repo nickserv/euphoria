@@ -35,7 +35,7 @@ gem 'uglifier', '>= 1.3.0' # JavaScript compressor
 gem 'jquery-rails' # JavaScript library
 gem 'turbolinks' # makes following links faster
 gem 'jbuilder', '~> 1.2' # builds JSON APIs with ease
-gem 'bootstrap-generators', '~> 3.0' # adds Bootstrap support to generators
+#gem 'bootstrap-generators', '~> 3.0' # adds Bootstrap support to generators
 gem 'gravatar-ultimate' # Gravatar support
 
 # Documentation
