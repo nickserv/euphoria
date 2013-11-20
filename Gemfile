@@ -36,6 +36,7 @@ gem 'jquery-rails' # JavaScript library
 gem 'turbolinks' # makes following links faster
 gem 'jbuilder', '~> 1.2' # builds JSON APIs with ease
 #gem 'bootstrap-generators', '~> 3.0' # adds Bootstrap support to generators
+gem 'bootstrap-sass', '~> 3.0' # adds Bootstrap support
 gem 'gravatar-ultimate' # Gravatar support
 
 # Documentation
