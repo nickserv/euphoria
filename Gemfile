@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+# Ruby version
+ruby '2.0.0'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.1'
 
@@ -32,7 +35,8 @@ gem 'uglifier', '>= 1.3.0' # JavaScript compressor
 gem 'jquery-rails' # JavaScript library
 gem 'turbolinks' # makes following links faster
 gem 'jbuilder', '~> 1.2' # builds JSON APIs with ease
-gem 'bootstrap-generators', '~> 3.0' # adds Bootstrap support to generators
+#gem 'bootstrap-generators', '~> 3.0' # adds Bootstrap support to generators
+gem 'bootstrap-sass', '~> 3.0' # adds Bootstrap support
 gem 'gravatar-ultimate' # Gravatar support
 gem 'simple_form' # DSL for forms
 
