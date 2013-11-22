@@ -3,9 +3,7 @@
 kitchen:
   name: Kitchen
   description: MyString
-  world_id: 
 
 basement:
   name: Basement
   description: MyString
-  world_id: 
