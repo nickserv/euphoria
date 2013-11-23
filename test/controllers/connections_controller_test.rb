@@ -26,6 +26,12 @@ class ConnectionsControllerTest < ActionController::TestCase
     assert_redirected_to connection_path(assigns(:connection))
   end
 
+  test 'should not create invalid connection' do
+    assert_no_difference('Connection.count') do
+      post :create, connection: { direction: 'north' }
+    end
+  end
+
   test 'should show connection' do
     get :show, id: @connection
     assert_response :success
@@ -39,6 +45,12 @@ class ConnectionsControllerTest < ActionController::TestCase
   test 'should update connection' do
     patch :update, id: @connection, connection: { direction: @connection.direction, neighbor_id: @connection.neighbor_id, room_id: @connection.room_id }
     assert_redirected_to connection_path(assigns(:connection))
+  end
+
+  test 'should not update invalid connection' do
+    assert_no_difference('Connection.count') do
+      patch :update, id: @connection, connection: { direction: 'north' }
+    end
   end
 
   test 'should destroy connection' do
