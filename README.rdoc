@@ -1,3 +1,5 @@
+= Deprecated
+
 = Euphoria
 {<img src="https://travis-ci.org/nicolasmccurdy/euphoria.png?branch=master" alt="Build Status" />}[https://travis-ci.org/nicolasmccurdy/euphoria]
 {<img src="https://gemnasium.com/nicolasmccurdy/euphoria.png" alt="Dependency Status" />}[https://gemnasium.com/nicolasmccurdy/euphoria]
